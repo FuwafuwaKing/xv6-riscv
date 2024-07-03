@@ -136,6 +136,8 @@ UPROGS=\
 	$U/_prime\
 	$U/_pwd\
 	$U/_getfd\
+	$U/_test_setenv\
+	$U/_test_getenv\
 
 fs.img: mkfs/mkfs README $(UPROGS)
 	mkfs/mkfs fs.img README $(UPROGS)

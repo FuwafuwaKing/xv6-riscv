@@ -21,3 +21,5 @@
 #define SYS_mkdir  20
 #define SYS_close  21
 #define SYS_getfdmap 22
+#define SYS_setenv  23  // 使用されていない番号を選択
+#define SYS_getenv  24

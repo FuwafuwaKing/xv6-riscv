@@ -104,3 +104,22 @@ sys_getfdmap(void)
 
     return fd_mask;
 }
+
+uint64
+sys_setenv(void)
+{
+  char name[32];
+  char value[128];
+  if(argstr(0, name, sizeof(name)) < 0 || argstr(1, value, sizeof(value)) < 0)
+    return -1;
+  return setenv(name, value);
+}
+
+uint64
+sys_getenv(void)
+{
+  char name[32];
+  if(argstr(0, name, sizeof(name)) < 0)
+    return -1;
+  return (uint64)getenv(name);
+}
